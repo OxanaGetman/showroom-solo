@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #171717;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background-color: #171717;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.link {
+  padding: 10px 60px;
+  text-decoration: none;
+  color: #EDEDED;
+  font-size: 25px;
+  font-family: 'Inter', sans-serif;
+}
+
+.btnMain {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  color: #EDEDED;
+  border: none;
+  background-color: #171717;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;  
+}
+
+.btn:hover {
+  text-shadow: 0 0 10px #B983FF,0 0 20px #B983FF,0 0 30px #B983FF,0 0 40px #B983FF;
+}
+
+.soloHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.solo {
+  font-size: 120px;
+  color: #EDEDED;
+  font-family: 'Island Moments', cursive;
+  font-style: italic;
+  margin: 10px;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photoPlace {
+  flex-grow: 1;
+  flex-basis: 15%;
+  padding: 2%;
+}
+
+.textStyle {
+  color: #EDEDED;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.textAbout {
+  color: #EDEDED;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  align-items: center;
+  width: 500px;
+  padding: 20px;
+}
+
+.moreText {
+  color: #120EFA;
+  border: none;
+  background-color: #171717;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;  
+}
+
+.btnSlide {
+  background-color: #B8B5FF;
+  color: #171717;
+  padding: 30px;
+  margin: 30px;
+  font-family: 'Inter', sans-serif;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contactMain {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contAdress {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  font-family: 'Inter', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.headerCont {
+  color: #B8B5FF;
+  font-size: 40px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.adress {
+  color: #EDEDED;
+  font-size: 30px;
+}
+
+@media all and (max-width: 913px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .solo {
+    font-size: 80px;
+    text-align: center;
+  }
+
+  .btnMain, .photoPlace {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    margin: 5px;
+  }
+  
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textAbout {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    width: 280px;
+    padding: 20px;
+  }
+
+  .btnSlide {
+    padding: 30px;
+    margin: 30px;
+  }
+
+  .contactMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contAdress {
+    text-align: center;
+  }
+
+  .headerCont, .adress{
+    font-size: 25px;
+    margin: 10px;
+  }
+
+  .picSizaCont {
+    width: 350px;
+    height: 450px;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .picSize, .picSizeAbout, .picSizaCont {
+    width: 250px;
+    height: 350px;
+  }
+
+  .btnSlide {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .textAbout {
+    width: 230px;
   }
 }
