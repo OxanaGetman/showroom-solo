@@ -1,11 +1,11 @@
 import "./App.css";
 import { useState } from "react";
 import { dataSlides } from "./dataSlides";
+import Text from "./Text";
 
 function About() {
     const [photo, setPhoto] = useState(0);
-    const {imageSlide, textSlide} = dataSlides[photo];
-    const [showMore, setShowMore] = useState(false);
+    const {imageSlide} = dataSlides[photo];
 
     const nextBtn = () => {
         setPhoto ((photo => {
@@ -44,12 +44,9 @@ function About() {
                     </div> 
                 </div>
                 <div className="aboutTextPlace">
-                    <p className="textAbout">{showMore ? textSlide : textSlide.substring(0,170) + "..."}
-                        <button className="moreText" onClick={()=> setShowMore(!showMore)}>{showMore ? "скрыть" : "читать дальше"}</button>
-                    </p>
+                    <Text />
                 </div>
             </div>
-
         </div>
     );
 }
